@@ -9,6 +9,8 @@
   "license": "MIT",
   "ignore": [],
   "dependencies": {
-    "bootstrap": "~3.3.0"
+    "bootstrap": "~3.3.0",
+    "normalize.css": "~3.0.2",
+    "flexslider": "*"
   }
 }
