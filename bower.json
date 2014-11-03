@@ -1,0 +1,14 @@
+{
+  "name": "klemensarla.com",
+  "version": "1.0",
+  "homepage": "https://github.com/janezsarlah/web-site",
+  "authors": [
+    "JanezSarlah <janez.sarlah@gmail.com>"
+  ],
+  "description": "Portfolio website.",
+  "license": "MIT",
+  "ignore": [],
+  "dependencies": {
+    "bootstrap": "~3.3.0"
+  }
+}
