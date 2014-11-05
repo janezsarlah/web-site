@@ -16,25 +16,26 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body id="top">
+	<!-- Navigation -->
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
-			<div class="navbar-header">
+			<div class="navbar-header page-scroll">
 			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 			    	<span class="sr-only">Toggle navigation</span>
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			    </button>
-			    <a class="navbar-brand" href="#">Graphic Design</a>
+			    <a class="navbar-brand" href="#top">Graphic Design</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	            <ul class="nav navbar-nav navbar-right">
 	                <li class="page-scroll">
-	                    <a href="#about">About</a>
+	                    <a href="#gallery">Gallery</a>
 	                </li>
 	                <li class="page-scroll">
-	                    <a href="#gallery">Gallery</a>
+	                    <a href="#about">About</a>
 	                </li>
 	                <li class="page-scroll">
 	                    <a href="#contact">Contact</a>
@@ -44,26 +45,107 @@
 		</div>
 	</nav>
 
+	<!-- FlexSlider -->
+	<section>
+		<div class="flexslider">
+		  <ul class="slides">
+		    <li>
+		      <img src="assets/slider/slide1.jpg" />
+		    </li>
+		    <li>
+		      <img src="assets/slider/slide2.jpg" />
+		    </li>
+		    <li>
+		      <img src="assets/slider/slide3.jpg" />
+		    </li>
+		  </ul>
+		</div>
+	</section>
 
-	<div class="flexslider">
-	  <ul class="slides">
-	    <li>
-	      <img src="assets/slider/slide1.jpg" />
-	    </li>
-	    <li>
-	      <img src="assets/slider/slide2.jpg" />
-	    </li>
-	    <li>
-	      <img src="assets/slider/slide3.jpg" />
-	    </li>
-	  </ul>
-	</div>
+	<!-- Gallery section -->
+	<section id="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Gallery</h1>
+                </div>
+            </div>
+
+            <div id="filters" class="button-group">
+			  <button class="button is-checked" data-filter="*">All</button>
+			  <button class="button" data-filter=".enviroment">Enviroment</button>
+			  <button class="button" data-filter=".character">Character</button>
+			  <button class="button" data-filter=".gun">Guns</button>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="isotope">		
+						<div class="col-sm-4 iso-item gun" id="iso-hack1" data-category="gun">
+					    	<img src="assets/work/slide1.jpg" class="img-responsive" alt="">
+					  	</div>
+					  	<div class="col-sm-4 iso-item gun" id="iso-hack2" data-category="gun">
+					    	<img src="assets/work/slide1.jpg" class="img-responsive" alt="">
+					  	</div>
+					  	<div class="col-sm-4 iso-item enviroment" id="iso-hack3" data-category="enviroment">
+					    	<img src="assets/work/slide2.jpg" class="img-responsive" alt="">
+					  	</div>
+					  	<div class="col-sm-4 iso-item character" id="iso-hack4" data-category="character">
+					    	<img src="assets/work/slide3.jpg" class="img-responsive" alt="">
+					  	</div>
+					  	<div class="col-sm-4 iso-item enviroment" id="iso-hack5" data-category="enviroment">
+					    	<img src="assets/work/slide2.jpg" class="img-responsive" alt="">
+					  	</div>
+					  	<div class="col-sm-4 iso-item character" id="iso-hack6" data-category="character">
+					    	<img src="assets/work/slide3.jpg" class="img-responsive" alt="">
+					  	</div>
+				  	</div>	
+				</div>            
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>About</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 align">
+                    <p>Hi, my name is Klemen Šarlah and I am the founder of Graphic Design. 
+                        On this website you will find my personal graphic design portfolio 
+                        (My design services are currently available for hire). Iam skilled at graphic design,
+                        concept art, branding, typography & more. Currently seeking freelance gigs or full-time 
+                        employment near the sea.<p>
+                </div>
+                <div class="col-md-4 col-lg-4 col-md-offset-1 col-lg-offset-1 align">
+                    <ul>
+                    	<li>Visual Development</li>
+                    	<li>Environment Design</li>
+                    	<li>Character Design</li>
+                    	<li>Graphic Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 	<!-- Scripts -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script type="text/javascript" src="bower_components/flexslider/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="bower_components/classie/classie.js"></script>
+	<script type="text/javascript" src="bower_components/isotope/dist/isotope.pkgd.js"></script>
+	
+	
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	
+	<script type="text/javascript" src="js/animateNav.js"></script>
 	<script type="text/javascript" src="js/javascript.js"></script>
+	<script type="text/javascript" src="js/iso.js"></script>
 </body>
 </html>

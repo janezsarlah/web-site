@@ -23,6 +23,22 @@
 		line-height: 85px;
 	}
 
+	.navbar-inverse.navbar-fixed-top.navbar-shrink {
+		background-color: #333;
+		opacity: 1;
+		top: 0;
+	}
+
+	.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > li > a {
+		line-height: 20px;
+		font-size: 15px;
+	}
+
+	.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-brand {
+		line-height: 20px;
+		font-size: 25px;
+	}
+
 	.navbar-inverse .navbar-nav > li > a {
 		font-size: 20px;
 		color: #ffffff;
@@ -31,11 +47,66 @@
 
 	.navbar-inverse .navbar-nav > li > a:hover {
 		background-color: rgba(225, 225, 225, 0.8);
-		line-height: 80px;
+		line-height: 85px;
 		color: #000000;
 		opacity: 0.8;
 	}
+
+	/* Navbar animation */
+	.navbar-fixed-top {
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-fixed-top .navbar-collapse .nav li a{  
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
 }
+
+/* Remove when dinamic */ 
+@media (max-width: 3000px) {
+	.col-sm-4 {
+		height: 160px;
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 2500px) {
+	.col-sm-4 {
+		height: 155px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.col-sm-4 {
+		height: 130px;
+	}
+}
+
+@media (max-width: 991px) {
+	.col-sm-4 {
+		height: 90px;
+	}
+}
+/* End remove when dinamic */
+
+@media (max-width: 765px) {
+	.iso-item img {
+		width: 100%;
+		display: block;
+	}
+}
+
 
 .flexslider {
 	border: none;
@@ -52,4 +123,15 @@
 	-o-user-select: none;
 	user-select: none;
 }
+
+.button:active, .button.is-checked {
+    background-color: #28f;
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+
+
 

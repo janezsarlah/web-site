@@ -11,6 +11,8 @@
   "dependencies": {
     "bootstrap": "~3.3.0",
     "normalize.css": "~3.0.2",
-    "flexslider": "*"
+    "flexslider": "*",
+    "isotope": "~2.0.1",
+    "classie": "~1.0.1"
   }
 }
