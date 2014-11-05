@@ -1,3 +1,18 @@
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 40px; 
+}
+
+p { font-size: 1.5em; text-align: justify;}
+ul li { font-size: 1.5em; }
+
 @media (min-width: 765px) and (max-width: 2500px) {
 	.nav > li > a {
 		padding: 15px 25px;
@@ -131,6 +146,8 @@
 section {
 	margin-bottom: 40px;
 }
+
+
 
 
 
