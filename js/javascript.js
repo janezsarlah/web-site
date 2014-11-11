@@ -36,6 +36,19 @@ $container.isotope({
   itemSelector : '.iso-item'
 });
 
+// Fancybox and tooltip options
+$(document).ready(function() {
+    $('.fancybox').fancybox({
+        padding:    2,
+        arrows:     false,
+        mouseWheel: false
+    });
+
+    $('.tooltip').tooltipster();
+    
+});
+
+
 // Floating label headings for the contact form
 $(function() {
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
@@ -49,8 +62,8 @@ $(function() {
 
 // Change color of Contact Us inputs
 $(".floating-label-form-group").on("click", function() {
-    $(".floating-label-form-group").css("background", "whte");
+    $(".floating-label-form-group").css("background", "white");
     $(".floating-label-form-group").css("opacity", "1"); 
     $(".floating-label-form-group").css("border", "1px solid white"); 
-}); 
+});
 

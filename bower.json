@@ -13,6 +13,9 @@
     "normalize.css": "~3.0.2",
     "flexslider": "*",
     "isotope": "~2.0.1",
-    "classie": "~1.0.1"
+    "classie": "~1.0.1",
+    "font-awsome": "~4.2.0",
+    "fancybox": "~2.1.5",
+    "tooltipster": "~3.2.6"
   }
 }
