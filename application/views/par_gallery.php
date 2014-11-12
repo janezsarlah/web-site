@@ -7,7 +7,7 @@
                 </div>
             </div>
 
-            <div id="filters" class="button-group" style="text-align:center;">¸
+            <div id="filters" class="button-group" style="text-align:center;">
             	<?php
 	        		echo '<button class="button btn btn-default btn-lg is-checked" data-filter="*">All</button>';
 	        		foreach ($gallery_type as $row) {

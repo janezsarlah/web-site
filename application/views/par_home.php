@@ -7,7 +7,7 @@
 	<meta name="description" content="Graphic design">
     <meta name="author" content="Klemen Šarlah">
 
-	<title>Design :: Klemen</title>
+	<title><?php echo $title; ?></title>
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
@@ -20,5 +20,6 @@
 
 	<!-- Google font -->
 	
-<link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic|Montserrat:700,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cardo:400,400italic|Montserrat:700,400' rel='stylesheet' type='text/css'>
 </head>
+	<body id="top">

@@ -57,7 +57,7 @@ ul li { font-size: 1.5em; }
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.2em;
-    margin: 20px;
+   	margin: 20px 0;
     position: relative;
     text-transform: uppercase;
 }
@@ -117,7 +117,7 @@ ul li { font-size: 1.5em; }
 
 @media (min-width: 765px) and (max-width: 3000px) {
 	.nav > li > a {
-		padding: 15px 25px;
+		padding: 15px 21px;
 	}
 
 	.navbar-inverse {
@@ -128,8 +128,13 @@ ul li { font-size: 1.5em; }
 	}
 
 	.navbar-inverse .navbar-brand {
+		font-family: "Montserrat",sans-serif;
 		color: #ffffff;
 	}
+
+	.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a {
+		font-family: "Montserrat",sans-serif;
+	} 
 
 	.navbar-brand {
 		font-size: 40px;
@@ -137,6 +142,7 @@ ul li { font-size: 1.5em; }
 	}
 
 	.navbar-nav > li > a {
+		font-family: "Montserrat",sans-serif;
 		line-height: 85px;
 	}
 
@@ -177,6 +183,7 @@ ul li { font-size: 1.5em; }
     }
 
     .navbar-fixed-top .navbar-brand {
+    	
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;

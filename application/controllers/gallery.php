@@ -11,6 +11,7 @@ class Gallery extends CI_Controller {
 		$this->load->model("model_gallery");
 		$data['gallery'] = $this->model_gallery->getImages();
 		$data['gallery_type'] = $this->model_gallery->getGalleryTypes();
+		$data['title'] = "Design :: Klemen";
 		
 
 		$this->load->view("view_web_site", $data);

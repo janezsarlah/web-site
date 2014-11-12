@@ -37,3 +37,23 @@
         </div>
     </div>
 </section>
+
+<!-- Footer -->
+<section id="footer"> 
+    <footer class="text-center container">
+        <div class="row"><a href="">
+            <div class="col-md-6 col-md-offset-3">
+                <a href="https://www.facebook.com/klemen.sarlah?fref=ts" target="_blank"><i class="btn-social btn-outline fa fa-facebook"></i></a>
+                <a href="http://sarlah.deviantart.com/" target="_blank"><i class="btn-social btn-outline fa fa-deviantart"></i></a>
+                <div class="tooltip" title="Not yet added!"><i class="btn-social btn-outline fa fa-linkedin"></i></div>
+                <div class="tooltip" title="klemen.sarlah"><i class="btn-social btn-outline fa fa-skype"></i></div>
+                <div class="tooltip" title="Not yet added!" href=""><i class="btn-social btn-outline fa fa-twitter"></i></div>
+
+            </div>
+
+            <div class="col-lg-12 space">
+                Copyright &copy; Janez Šarlah 2014
+            </div>
+        </div>
+    </footer>
+</section>
