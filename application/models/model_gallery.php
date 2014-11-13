@@ -10,6 +10,8 @@ class Model_gallery extends CI_Model {
 		$query = $this->db->query("SELECT DISTINCT gt.type, g.id_gallery_type FROM gallery_type AS gt LEFT JOIN gallery AS g ON gt.id=g.id_gallery_type");
 		return $query->result();
 	}
+
+	
 }
 
 ?>

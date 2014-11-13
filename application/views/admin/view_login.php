@@ -1,6 +1,4 @@
-<div class="container">
-  <?php 
-    
+<?php 
     $attributes_open = array(
       'class'   => 'form-signin',
       'role'    => 'form'
@@ -22,8 +20,12 @@
       'value'       => 'remember-me'
     );
     $attributes_button = array(
-      'class'       => 'btn btn-lg btn-primary btn-block'
+      'class'       => 'btn btn-lg btn-primary btn-block login'
     );
+?>
+
+<div class="container">
+  <?php    
 
     echo form_open("user/validateLogin", $attributes_open); 
     echo validation_errors();

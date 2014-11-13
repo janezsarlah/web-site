@@ -67,3 +67,5 @@ $(".floating-label-form-group").on("click", function() {
     $(".floating-label-form-group").css("border", "1px solid white"); 
 });
 
+
+

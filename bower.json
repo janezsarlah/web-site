@@ -16,6 +16,7 @@
     "classie": "~1.0.1",
     "font-awsome": "~4.2.0",
     "fancybox": "~2.1.5",
-    "tooltipster": "~3.2.6"
+    "tooltipster": "~3.2.6",
+    "jasny-bootstrap": "~3.1.3",
   }
 }

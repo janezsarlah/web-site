@@ -6,13 +6,13 @@ class User extends CI_Controller {
 	}
 
 	public function login() {
-
 		$title["title"] = "Login :: Klemen";
 		
 		$this->load->view("admin/par_admin_home", $title);
 		$this->load->view("admin/view_login");
 		$this->load->view("admin/par_admin_footer");
 	}
+
 
 	public function validateLogin() {
 		$this->load->library("form_validation");
@@ -27,19 +27,31 @@ class User extends CI_Controller {
 			$this->session->set_userdata($data);
 			redirect("user/adminpanel");
 		} else {
-			redirect("user/login");
+			$title["title"] = "Login :: Klemen";
+		
+			$this->load->view("admin/par_admin_home", $title);
+			$this->load->view("admin/view_login");
+			$this->load->view("admin/par_admin_footer");
 		}
 	}
 
 	public function adminpanel() {
 		if($this->session->userdata("is_logged_in")) {
 			$data["title"] = "Admin panel";
+			$data["upload_error"] = $this->session->flashdata("upload_error");
+			$data["upload_success"] = $this->session->flashdata("upload_success");
+			$data['galleryTypes'] = $this->uploadGalleryTypes();
 			$this->load->view("admin/par_admin_home", $data);
-			$this->load->view("admin/view_admin_panel");
+			$this->load->view("admin/view_admin_panel", $data);
 			$this->load->view("admin/par_admin_footer");
 		} else {
 			redirect("user/restricted");
 		}
+	}
+
+	public function uploadGalleryTypes() {
+		$this->load->model("model_gallery");
+		return $this->model_gallery->getGalleryTypes(); 
 	}
 
 	public function restricted() {
@@ -47,7 +59,6 @@ class User extends CI_Controller {
 		$this->load->view("admin/par_admin_home", $data);
 		$this->load->view("restricted");
 		$this->load->view("admin/par_admin_footer");
-
 	}
 
 	public function logout() {

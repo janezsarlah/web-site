@@ -9,6 +9,11 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
+
+.form-signin p {
+  color: red;
+}
+
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
@@ -38,6 +43,7 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
 
 .jumbotron .btn {
   font-size: 21px;
