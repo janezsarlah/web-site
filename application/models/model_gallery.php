@@ -11,6 +11,17 @@ class Model_gallery extends CI_Model {
 		return $query->result();
 	}
 
+	public function addImage($values) {
+		$this->db->insert('gallery', $values); 
+	}
+
+	public function getTypeId($galleryType) {
+		$query = $this->db->query("SELECT id FROM gallery_type WHERE type='". $galleryType . "';");
+		if($query->row())
+			return $query->row()->id;
+		else
+			return "";
+	}
 	
 }
 

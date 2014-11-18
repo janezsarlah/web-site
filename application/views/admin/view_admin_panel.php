@@ -19,8 +19,8 @@
 	<div class="row">
 		<div class="col-md-3 col-md-offset-2">
 			<div class="fileinput fileinput-new" data-provides="fileinput">
-	  			<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;"></div>
-	  			<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+	  			<div class="fileinput-new thumbnail" style="width: 400px; height: 300px;"></div>
+	  			<div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 400px; max-height: 300px;"></div>
 	  
 	  			<div>
 				    <span class="btn btn-file btn-success"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
@@ -43,9 +43,9 @@
 		<div class="col-md-3 col-md-offset-2 text-center">
 			<?php 
 			  	echo form_open_multipart('upload/uploadImage');
-			  	echo '<div class="fileinput-new thumbnail" style="width: 200px; height: 150px;"></div>';
+			  	echo '<div class="fileinput-new thumbnail" style="width: 400px; height: 300px;"></div>';
 			  	echo form_input($attributes_image, $this->input->post("uploadImage"));
-			  	echo '<select class="form-control">';
+			  	echo '<select class="form-control" name="galleryType">';
  
   				foreach ($galleryTypes as $row) {
   					echo "<option>" . $row->type . "</option>";

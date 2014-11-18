@@ -13,7 +13,6 @@ class Gallery extends CI_Controller {
 		$data['gallery_type'] = $this->model_gallery->getGalleryTypes();
 		$data['title'] = "Design :: Klemen";
 		
-
 		$this->load->view("view_web_site", $data);
 	}
 }
