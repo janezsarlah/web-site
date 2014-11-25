@@ -7,12 +7,21 @@ class Gallery extends CI_Controller {
 
 	public function loadGallery() {
 
-
 		$this->load->model("model_gallery");
-		$data['gallery'] = $this->model_gallery->getImages();
-		$data['gallery_type'] = $this->model_gallery->getGalleryTypes();
+		$this->load->model("model_gallery_type");
+		$data['gallery'] = $this->model_gallery->getImages(null, null);
+		$data['gallery_type'] = $this->model_gallery_type->getGalleryTypes();
 		$data['title'] = "Design :: Klemen";
 		
 		$this->load->view("view_web_site", $data);
+	}
+
+	public function test() {
+		$this->load->view("admin/old");
+	}
+
+	public function bla() {
+		echo $this->input->post("uploadImage");
+		die();
 	}
 }

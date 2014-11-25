@@ -42,5 +42,19 @@ $route['default_controller'] = "gallery";
 $route['404_override'] = '';
 
 
+/* Custom routs */
+
+
+$route['admin/gallery/add'] 			= 'admin/add';
+$route['admin/gallery/update'] 			= 'admin/update'; 
+$route['admin/gallery/update/(:any)'] 	= 'admin/update/$1'; 
+$route['admin/gallery/delete/(:any)'] 	= 'admin/delete/$1'; 
+
+$route['admin/types'] 					= 'types/load_types';
+$route['admin/types/add']				= 'types/add_new_type';
+$route['admin/types/update/(:any)']		= 'types/update_type/$1';
+$route['admin/types/delete/(:any)']		= 'types/delete_type/$i';
+
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
