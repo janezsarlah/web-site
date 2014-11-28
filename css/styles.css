@@ -345,3 +345,7 @@ form .row:first-child .floating-label-form-group {
 	opacity: 1;
 	position: relative;
 }
+
+.form-control {
+	padding: 0;
+}

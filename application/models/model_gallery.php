@@ -119,18 +119,16 @@ class Model_gallery extends CI_Model {
 	* @param int $id
 	* @return boolean
 	*/
-	public function deleteImage($id, $path_s, $path_o) {
+	public function deleteImage($id) {
 		$this->db->where('id', $id);
-		$this->db->delete('gallery');
-
-		if($this->db->affected_rows() >= 1){
-		    if(unlink($path_s) && unlink($path_o)) {
-		    	return true;
-		    } else {
- 		    	return false;
-			}
+		$query = $this->db->get('gallery');
+		
+		if($query->num_rows() > 0) {
+		    $this->db->where('id', $id);
+			$this->db->delete('gallery');
+			return true;    
 		} else {
-		    return false;
+			return false;
 		}
 	}
 

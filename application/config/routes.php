@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "gallery";
+$route['default_controller'] = "load_content";
 $route['404_override'] = '';
 
 
@@ -54,6 +54,12 @@ $route['admin/types'] 					= 'types/load_types';
 $route['admin/types/add']				= 'types/add_new_type';
 $route['admin/types/update/(:any)']		= 'types/update_type/$1';
 $route['admin/types/delete/(:any)']		= 'types/delete_type/$i';
+
+$route['admin/slides']					= 'slides/load_slides';
+$route['admin/slides/add']				= 'slides/add_new_slide';
+$route['admin/slides/delete/(:any)']	= 'slides/remove_slide/$1';
+
+$route['send_email']					= 'email/send_email';
 
 
 /* End of file routes.php */

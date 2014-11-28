@@ -38,6 +38,9 @@
 					  	<li <?php if($this->uri->segment(2) == 'types'){echo 'class="active"';}?>>
 					    	<a href="<?php echo base_url(); ?>admin/types">Types</a>
 					  	</li>
+					  	<li <?php if($this->uri->segment(2) == 'slides'){echo 'class="active"';}?>>
+					    	<a href="<?php echo base_url(); ?>admin/slides">Slides</a>
+					  	</li>
 
 					    <li class="dropdown">
 					      	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">System <span class="caret"></span></a>

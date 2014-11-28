@@ -150,7 +150,6 @@ class Admin extends CI_Controller {
 					'upload_path'     => "./assets/uploads/",
 			        'upload_url'      => base_url() . "assets/uploads/",
 			        'allowed_types'   => "gif|jpg|png|jpeg",
-			        'overwrite'       => TRUE,
 			        'max_size'        => "5000",
 			        'max_height'      => "4000",
 			        'max_width'       => "4000"  
@@ -161,6 +160,7 @@ class Admin extends CI_Controller {
 				if ($this->upload->do_upload("uploadImage")) {
 
 					$image_data = $this->upload->data();
+
 					unset($config);
 
 					$resSettings = $this->resizeSettings($image_data);
@@ -324,12 +324,27 @@ class Admin extends CI_Controller {
 
 		foreach ($this->model_gallery->getForRepositioning($gallery_type, $position) as $row) {
 			$this->model_gallery->repositionImages($row->id);
-		}
+		}	
 
-		if($this->model_gallery->deleteImage($id, $data['path_small'], $data['path_original'])) 
+		if($this->model_gallery->deleteImage($id)) { 
 			$this->session->set_flashdata('flash_message', 'delete');
+
+			chmod(LOCAL_UPLOAD_PATH.$data['path_small'], 0777);
+			if(is_writable($data['path_small'])) {
+				unlink($data['path_small']);
+			} else {
+				echo "small not";die();	
+			}
+
+			chmod(LOCAL_UPLOAD_PATH.$data['path_original'], 0777);
+			if(is_writable($data['path_original'])) {
+				unlink($data['path_original']);	
+			} 
+		}
 		else 
 			$this->session->set_flashdata('flash_message', 'error');
+
+		
 		
 		redirect('admin/gallery');
 	}

@@ -38,7 +38,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
 
 /* Custom constants */
- define('LOCAL_UPLOAD_PATH',		'/opt/lampp/htdocs/web-site/');
+define('LOCAL_UPLOAD_PATH',		'/opt/lampp/htdocs/web-site/');
 
 
 /* End of file constants.php */

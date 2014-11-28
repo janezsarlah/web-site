@@ -16,6 +16,9 @@
 */
 $config['base_url']	= 'http://localhost/web-site/';
 
+$config['server_root'] = $_SERVER['DOCUMENT_ROOT']; // This is like the above example but it shows the server root
+
+
 /*
 |--------------------------------------------------------------------------
 | Index File
